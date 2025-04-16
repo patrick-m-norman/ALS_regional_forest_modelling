@@ -1,0 +1,48 @@
+# LITCHI_GRID_SETUP.txt - Instructions for Litchi Grid Generation & OpenDroneMap Processing
+
+This document outlines the steps required to generate Litchi flight grids and process drone imagery using OpenDroneMap. Please read carefully before proceeding.
+
+**1. Prerequisites & Environment Setup**
+
+*   **Bash Environment:** You're going to need a Bash environment. This can be achieved through:
+    *   **Windows Subsystem for Linux (WSL):** Install WSL and a Linux distribution (e.g., Ubuntu). This is the recommended approach for Windows users.
+    *   **Linux Installation:** If you're already using a Linux distribution, you've already got this covered.
+*   **R Environment:**  You'll need R installed.  It's recommended to use a dedicated R environment like RStudio.
+*   **OpenDroneMap:** OpenDroneMap (ODM) needs to be installed.  Follow the official ODM installation instructions for your operating system: [https://www.opendronemap.org/](https://www.opendronemap.org/)
+
+**2. Setting up the Litchi Grid Generation**
+
+*   **R Script:** You'll be using the `auto_litchi_grid.R` script to generate the Litchi flight grid.
+*   **Template CSV:** The script uses a template CSV file to define the grid parameters.  Ensure you have a suitable template CSV file available.  The script will likely have instructions on the expected format of this file.
+*   **Running the Script:**
+    1.  Open R or RStudio.
+    2.  Set your working directory to the folder containing `auto_litchi_grid.R` and the template CSV file.
+    3.  Run the script: `source("auto_litchi_grid.R")`
+    4.  The script will generate a CSV file containing the Litchi flight lines. This CSV file can be directly loaded into the Litchi Mission Hub.
+
+**3. Drone Flight and Image Collection**
+
+*   Load the generated CSV file into the Litchi Mission Hub.
+*   Fly the drone according to the generated flight plan.
+*   Ensure that all images are collected and stored.
+
+**4. OpenDroneMap Processing**
+
+*   **Folder Structure:** The ODM processing requires a specific folder structure. For each site, create the following:
+    *   **Site Folder:** A folder representing the site (e.g., "Site1", "Site2").
+    *   **Images Folder:** Inside the site folder, create a folder named "images". This folder should contain all the drone photos collected for that site.
+*   **ODM Script:** You'll be using the provided OpenDroneMap bash script to automatically process the images.
+*   **Running the ODM Script:**
+    1.  Open a terminal.
+    2.  Navigate to the directory containing the ODM bash script.
+    3.  Run the script. The script will automatically loop through all site folders and process the images within the "images" folders.
+    4.  The processed data (point clouds and orthophotos) will be generated within each site folder.
+
+**5. Troubleshooting**
+
+*   **ODM Installation:** Ensure that OpenDroneMap is correctly installed and configured. Refer to the official ODM documentation for troubleshooting.
+*   **Folder Structure:** Double-check that the folder structure is correct. The ODM script relies on a consistent folder structure to find the images.
+*   **Image Format:** Ensure that the drone images are in a format supported by OpenDroneMap (e.g., JPG, PNG).
+*   **Memory Requirements:** ODM processing can be memory-intensive. Ensure that your system has sufficient RAM.
+*   **Script Output:** Pay attention to the output of the ODM script. It will often provide clues about what went wrong.
+

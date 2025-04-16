@@ -1,0 +1,76 @@
+# SETUP.txt - Instructions for Reproducing the Analysis
+
+This document outlines the steps required to set up your environment and rerun the analysis.  Please read carefully before proceeding.
+
+**1. Prerequisites & Environment Setup**
+
+*   **Bash Environment:** You're going to need a Bash environment. This can be achieved through:
+    *   **Windows Subsystem for Linux (WSL):**  Install WSL and a Linux distribution (e.g., Ubuntu).  This is the recommended approach for Windows users.
+    *   **Linux Installation:** If you're already using a Linux distribution, you're all set.
+
+*   **Conda Environments:** We'll use Conda environments to isolate dependencies. Create three separate environments:
+
+    ```bash
+    conda create -n gdal_env
+    conda activate gdal_env
+    conda install -c conda-forge gdal
+
+    conda create -n pdal_env
+    conda activate pdal_env
+    conda install -c -c conda-forge python-pdal gdal entwine matplotlib
+
+    conda create -n open3d_env
+    conda activate open3d_env
+    conda install -c conda-forge open3d
+    ```
+
+*   **R Environment:**  Install R and the necessary packages
+
+    ```bash
+    R
+    # Inside R:
+    install.packages(c("lidR", "sf", "terra", "raster", "dplyr", "ggplot2", "future"))
+    q() # Exit R
+    ```
+
+**2. Project Structure & Data**
+
+*   **Download Scripts:** Download all the R and shell scripts from the Git repository.
+*   **Create Project Folder:** Create a main project folder (e.g., `tree_height_analysis`).
+*   **Data Folder:** Inside the project folder, create a subfolder named `point_clouds`. This folder *must* contain your LAS/LAZ point cloud files.  Ensure the filenames are consistent with what's expected by the scripts (check the scripts for filename patterns if necessary).
+*   **Example Project Structure:**
+
+    ```
+    tree_height_analysis/
+    ├── opening_and_extracting_for_treeheights.sh
+    ├── smoothing_raster_and_getting_treetops.R
+    ├── other_scripts downloaded
+    └── point_clouds/
+        ├── point_cloud_1.laz #Example point cloud names
+        ├── point_cloud_2.laz
+        └── ...
+    ```
+
+**3. Configuration - Coordinate Reference System (CRS)**
+
+*   **Important:**  Before running the analysis, you *must* edit the `smoothing_raster_and_getting_treetops.R` script.
+*   **Locate the CRS Line:** Find the line that defines the Coordinate Reference System (CRS). It will likely look something like: `crs <- "+proj=..."` or `crs <- "EPSG:XXXX"`.
+*   **Update the CRS:**  Replace the existing CRS definition with the correct CRS for your point cloud data.  This is *critical* for accurate results.  If you're unsure of the correct CRS, consult the metadata associated with your point cloud data.
+
+**4. Running the Analysis**
+
+*   **Navigate to Project Folder:**  In your Bash terminal, navigate to the root of your project folder (e.g., `tree_height_analysis`).
+*   **Execute the Main Script:** Run the main shell script:
+
+    ```bash
+    ./opening_and_extracting_for_treeheights.sh
+    ```
+
+    This script will orchestrate the entire analysis pipeline.  It will call the R, python and PDAL scripts in the correct order.
+
+**5. Troubleshooting**
+
+*   **Missing Dependencies:** If you encounter errors related to missing packages, double-check that you've installed all the required packages in the correct Conda environments.
+*   **CRS Errors:**  If you get errors related to coordinate systems, carefully review the CRS definition in `smoothing_raster_and_getting_treetops.R`.
+*   **File Paths:**  Ensure that all file paths in the scripts are correct and that the scripts have the necessary permissions to access the data.
+*   **Check Script Output:**  Pay attention to the output of the shell script.  It will often provide clues about what went wrong.
