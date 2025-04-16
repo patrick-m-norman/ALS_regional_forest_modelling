@@ -26,7 +26,6 @@ The repository is organized into the following directories:
 * **`Drone_related_scripts/`**: Scripts and workflows for drone flight planning and processing of drone imagery.
     * `[Script files and data files specific to drone flight and processing]`
 * **`README.md`**: This file.
-* **`LICENSE`**:  Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). You are free to share, copy and redistribute the material in any medium or format, and adapt, remix, transform, and build upon the material for non-commercial purposes, provided that you give appropriate credit by citing this repository.
 
 ## Setup
 
@@ -40,6 +39,6 @@ Detailed instructions for running each analysis are provided in the `how_to_run.
 
 ## License
 
-* **`LICENSE`**:  Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). You are free to share, copy and redistribute the material in any medium or format, and adapt, remix, transform, and build upon the material for non-commercial purposes, provided that you give appropriate credit by citing this repository.
+* **`LICENSE`**:  Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). You are free to share, copy and redistribute the material in any medium or format, and adapt, remix, transform, and build upon the material for non-commercial purposes, provided that you give appropriate credit by citing this repository. You may not use the material for commercial purposes. We do not guarantee their accuracy or precision of the outputs as they represent modelled data.
 
 <!-- Add contact information for questions or collaboration -->
