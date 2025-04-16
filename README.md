@@ -1,0 +1,45 @@
+# Determinants of Forest Canopy Tree Height: Northern Rivers, NSW, Australia
+
+This repository contains the scripts and workflows used in the paper "Determinants of forest canopy tree height: a case study in the Northern Rivers of NSW, Australia" (in review).  The scripts facilitate processing of LiDAR data to derive tree height and crowns, and subsequent boosted regression tree (BRT) modelling to explore the drivers of tree height and drone mapping scrips.
+
+![Study Area](images/rainforest_drone.png "Rainforest from drone")
+
+## Paper Reference
+
+* **Title:** Determinants of forest canopy tree height: a case study in the Northern Rivers of NSW, Australia
+* **Status:** In Review
+* **Corresponding Author:** Dr Patrick Norman, Climate Action Beacon, Griffith University, email: p.norman@griffith.edu.au
+
+## Data Availability
+
+Once the paper has been published, links to the spatial data products generated during this study will be made available on this GitHub repository.  We will provide information on data formats, projections, and any associated metadata.
+
+## Repository Contents
+
+The repository is organized into the following directories:
+
+* **`ALS_analysis_scripts/`**: Scripts and workflows for deriving tree height and crowns from LiDAR data.
+    * `how_to_run.txt`:  A guide on how to execute the associated scripts.
+    * `[Other script files and data files specific to tree height analysis]`
+* **`Boosted_regression_tree_scripts/`**: Scripts for building and evaluating boosted regression tree models to assess the drivers of tree height.
+    * `[Script files for BRT modelling, data preparation, and model evaluation]`
+* **`Drone_related_scripts/`**: Scripts and workflows for drone flight planning and processing of drone imagery.
+    * `[Script files and data files specific to drone flight and processing]`
+* **`README.md`**: This file.
+* **`LICENSE`**:  [Choose a license - e.g., MIT, Apache 2.0.  See notes below.]
+
+## Setup and Dependencies
+
+The scripts are primarily written in Bash, R and Python.  They rely on several external libraries and software packages.
+
+* **Linux or WSL (on Windows)** 
+
+## How to Run
+
+Detailed instructions for running each analysis are provided in the `how_to_run.txt` files within their respective directories (`ALS_analysis_scripts/`, `Drone_related_scripts/`).  Please read these guides carefully before attempting to execute the scripts.
+
+## License
+
+This repository is licensed under the [Choose a License - e.g., MIT License] - see the `LICENSE` file for details.
+
+<!-- Add contact information for questions or collaboration -->
