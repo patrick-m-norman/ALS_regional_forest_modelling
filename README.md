@@ -2,7 +2,7 @@
 
 This repository contains the scripts and workflows used in the paper "Determinants of forest canopy tree height: a case study in the Northern Rivers of NSW, Australia" (in review).  The scripts facilitate processing of LiDAR data to derive tree height and crowns, and subsequent boosted regression tree (BRT) modelling to explore the drivers of tree height and drone mapping scrips.
 
-![Forest in the region](images/rainforest_drone.png "Rainforest from drone")
+![Forest in the region](rainforest_drone.png "Rainforest from drone")
 
 ## Paper Reference
 
@@ -12,7 +12,7 @@ This repository contains the scripts and workflows used in the paper "Determinan
 
 ## Data Availability
 
-Once the paper has been published, links to the spatial data products generated during this study will be made available on this GitHub repository.  We will provide information on data formats, projections, and any associated metadata.
+Once the paper has been published, links to the spatial data products generated during this study will be made available on this GitHub repository.
 
 ## Repository Contents
 
@@ -28,9 +28,9 @@ The repository is organized into the following directories:
 * **`README.md`**: This file.
 * **`LICENSE`**:  [Choose a license - e.g., MIT, Apache 2.0.  See notes below.]
 
-## Setup and Dependencies
+## Setup
 
-The scripts are primarily written in Bash, R and Python.  They rely on several external libraries and software packages.
+The scripts are primarily written in Bash, R and Python. They rely on several external libraries and software packages including GDAL and PDAL.
 
 * **Linux or WSL (on Windows)** 
 
