@@ -1,12 +1,12 @@
-# Determinants of Forest Canopy Tree Height: Northern Rivers, NSW, Australia
+# Landscape-wide modelling of canopy tree crowns and heights using LiDAR: a case study in the Northern Rivers of NSW, Australia
 
-This repository contains the scripts and workflows used in the paper "Determinants of forest canopy tree height: a case study in the Northern Rivers of NSW, Australia" (in review).  The scripts facilitate processing of LiDAR data to derive tree height and crowns, and subsequent boosted regression tree (BRT) modelling to explore the drivers of tree height and drone mapping scripts.
+This repository contains the scripts and workflows used in the paper "Landscape-wide modelling of canopy tree crowns and heights using LiDAR: a case study in the Northern Rivers of NSW, Australia" (in review).  The scripts facilitate processing of LiDAR data to derive tree height and crowns, and subsequent boosted regression tree (BRT) modelling to explore the drivers of tree height and drone mapping scripts.
 
 ![Forest in the region](rainforest_drone.png "Rainforest from drone")
 
 ## Paper Reference
 
-* **Title:** Determinants of forest canopy tree height: a case study in the Northern Rivers of NSW, Australia
+* **Title:** Landscape-wide modelling of canopy tree crowns and heights using LiDAR: a case study in the Northern Rivers of NSW, Australia
 * **Status:** In Review
 * **Corresponding Author:** Dr Patrick Norman, Climate Action Beacon, Griffith University, email: p.norman@griffith.edu.au
 
