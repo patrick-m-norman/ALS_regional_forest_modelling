@@ -12,7 +12,7 @@ This repository contains the scripts and workflows used in the paper "Landscape-
 
 ## Data Availability
 
-Once the paper has been published, links to the spatial data products generated during this study will be made available on this GitHub repository.
+Datasets of both the canopy height model (https://zenodo.org/records/16791143) and tree crown datasets (https://zenodo.org/records/16741410) can be downloaded through Zenodo repositories.
 
 ## Repository Contents
 
